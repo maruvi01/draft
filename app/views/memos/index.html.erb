@@ -5,10 +5,8 @@
 <table>
   <thead>
     <tr>
+      <th>Tag(keys)</th>
       <th>Body</th>
-      <th>Tag</th>
-      <th>Tag</th>
-      <th>User</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,10 +14,8 @@
   <tbody>
     <% @memos.each do |memo| %>
       <tr>
-        <td><%= memo.body %></td>
         <td><%= memo.tag %></td>
-        <td><%= memo.tag_id %></td>
-        <td><%= memo.user_id %></td>
+        <td><%= memo.body %></td>
         <td><%= link_to 'Show', memo %></td>
         <td><%= link_to 'Edit', edit_memo_path(memo) %></td>
         <td><%= link_to 'Destroy', memo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
